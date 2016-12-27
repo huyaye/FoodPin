@@ -22,6 +22,8 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantIsVisited = Array(repeating: false, count: 21)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,6 +59,7 @@ class RestaurantTableViewController: UITableViewController {
         cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
         cell.locationLabel.text = restaurantLocations[indexPath.row]
         cell.typeLabel.text = restaurantTypes[indexPath.row]
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
         
         // Make a circle image by code
 //        cell.thumbnailImageView.layer.cornerRadius = 30.0
@@ -81,7 +84,8 @@ class RestaurantTableViewController: UITableViewController {
         let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .detailDisclosureButton
+            cell?.accessoryType = .checkmark
+            self.restaurantIsVisited[indexPath.row] = true
         })
         optionMenu.addAction(checkInAction)
         
