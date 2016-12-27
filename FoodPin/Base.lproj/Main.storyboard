@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="8fH-7E-JtN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="8fH-7E-JtN" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8fH-7E-JtN" id="zY8-0b-jE0">
@@ -69,6 +69,12 @@
                                         <constraint firstItem="2v5-4r-hd2" firstAttribute="top" secondItem="zY8-0b-jE0" secondAttribute="topMargin" constant="2" id="SDf-WS-2jj"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="Xd5-oi-2gs" id="97Z-XZ-afi"/>
+                                    <outlet property="nameLabel" destination="lOM-C4-yys" id="RAZ-7T-8hh"/>
+                                    <outlet property="thumbnailImageView" destination="Jo8-SQ-nQj" id="Bgq-lQ-Eso"/>
+                                    <outlet property="typeLabel" destination="aMe-UV-Ahm" id="rUc-5W-tnQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
