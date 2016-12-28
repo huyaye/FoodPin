@@ -123,7 +123,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4p-uf-9sE">
-                                                    <rect key="frame" x="8" y="7" width="359" height="21"/>
+                                                    <rect key="frame" x="8" y="7.5" width="359" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="261" verticalHuggingPriority="251" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WE-CQ-UhE">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
@@ -131,7 +131,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llD-fv-W53">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llD-fv-W53">
                                                             <rect key="frame" x="120" y="0.0" width="239" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -144,8 +144,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="T4p-uf-9sE" secondAttribute="bottom" constant="7" id="O6b-VD-yBz"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="T4p-uf-9sE" secondAttribute="trailing" id="U0r-EP-cDW"/>
                                                 <constraint firstItem="T4p-uf-9sE" firstAttribute="centerY" secondItem="hN3-5b-8h2" secondAttribute="centerY" id="gKu-JQ-gW4"/>
+                                                <constraint firstItem="T4p-uf-9sE" firstAttribute="top" secondItem="hN3-5b-8h2" secondAttribute="top" constant="7" id="h1M-mI-fDk"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="T4p-uf-9sE" secondAttribute="leading" id="okx-Jz-uph"/>
                                             </constraints>
                                         </tableViewCellContentView>
