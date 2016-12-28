@@ -44,6 +44,10 @@ class RestaurantTableViewController: UITableViewController {
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        // for Self Sizing Cells
+        tableView.estimatedRowHeight = 80.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
