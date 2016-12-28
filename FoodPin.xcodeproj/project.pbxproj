@@ -14,6 +14,7 @@
 		12DB63401E120EE5006C001A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */; };
 		12DB63421E122928006C001A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB63411E122928006C001A /* RestaurantTableViewCell.swift */; };
 		12DB63441E13657E006C001A /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */; };
+		12DB63461E136E5F006C001A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB63451E136E5F006C001A /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		12DB63411E122928006C001A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		12DB63451E136E5F006C001A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */,
 				12DB63411E122928006C001A /* RestaurantTableViewCell.swift */,
 				12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */,
+				12DB63451E136E5F006C001A /* Restaurant.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12DB63461E136E5F006C001A /* Restaurant.swift in Sources */,
 				12DB63401E120EE5006C001A /* RestaurantTableViewController.swift in Sources */,
 				12DB63421E122928006C001A /* RestaurantTableViewCell.swift in Sources */,
 				12DB63441E13657E006C001A /* RestaurantDetailViewController.swift in Sources */,
