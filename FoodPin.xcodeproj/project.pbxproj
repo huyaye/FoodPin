@@ -13,6 +13,7 @@
 		12DB63381E120B6E006C001A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63361E120B6E006C001A /* LaunchScreen.storyboard */; };
 		12DB63401E120EE5006C001A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */; };
 		12DB63421E122928006C001A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB63411E122928006C001A /* RestaurantTableViewCell.swift */; };
+		12DB63441E13657E006C001A /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		12DB63391E120B6E006C001A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		12DB63411E122928006C001A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				12DB63391E120B6E006C001A /* Info.plist */,
 				12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */,
 				12DB63411E122928006C001A /* RestaurantTableViewCell.swift */,
+				12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				12DB63401E120EE5006C001A /* RestaurantTableViewController.swift in Sources */,
 				12DB63421E122928006C001A /* RestaurantTableViewCell.swift in Sources */,
+				12DB63441E13657E006C001A /* RestaurantDetailViewController.swift in Sources */,
 				12DB632E1E120B6E006C001A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
