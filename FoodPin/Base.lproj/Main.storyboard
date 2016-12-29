@@ -114,6 +114,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
+                                <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="dBo-36-lY8">
+                                    <rect key="frame" x="0.0" y="364" width="375" height="135"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="xgQ-1X-zlx" customClass="RestaurantDetailTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="328" width="375" height="36"/>
@@ -186,13 +190,44 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="dBo-36-lY8" id="RYy-7X-LHG"/>
                         <outlet property="restaurantImageView" destination="A8b-zu-BKo" id="9Y5-Rw-KyM"/>
                         <outlet property="tableView" destination="SFk-NT-uS0" id="rpq-Ft-JHM"/>
+                        <segue destination="Xbn-xx-sYz" kind="show" identifier="showMap" id="eZZ-do-M1T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPI-SV-EPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2416.8000000000002" y="47.226386806596707"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SbL-We-ffd">
+            <objects>
+                <viewController id="Xbn-xx-sYz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGX-WM-Prn"/>
+                        <viewControllerLayoutGuide type="bottom" id="OvQ-6S-5bl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2o5-3B-MIb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v9j-PR-mOY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v9j-PR-mOY" firstAttribute="top" secondItem="2o5-3B-MIb" secondAttribute="top" id="EwY-Ec-CBK"/>
+                            <constraint firstItem="v9j-PR-mOY" firstAttribute="leading" secondItem="2o5-3B-MIb" secondAttribute="leading" id="TYU-xa-odT"/>
+                            <constraint firstAttribute="trailing" secondItem="v9j-PR-mOY" secondAttribute="trailing" id="ZVA-0V-y5s"/>
+                            <constraint firstItem="v9j-PR-mOY" firstAttribute="bottom" secondItem="OvQ-6S-5bl" secondAttribute="top" id="jmY-gX-5g4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOT-3b-mEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2416.8000000000002" y="751.57421289355329"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="Yse-J8-arw">

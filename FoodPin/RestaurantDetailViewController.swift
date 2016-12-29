@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var mapView: MKMapView!
+    
     var restaurant: Restaurant!
     
     override func viewDidLoad() {
@@ -19,13 +22,20 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
         restaurantImageView.image = UIImage(named: restaurant.image)
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
-        tableView.tableFooterView = UIView(frame: CGRect.zero)  // remove the separators of the empty rows
         tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
         title = restaurant.name
         
         // for Self Sizing Cells
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // for detecting the tap gesture
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMap))
+        mapView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func showMap() {
+        performSegue(withIdentifier: "showMap", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
