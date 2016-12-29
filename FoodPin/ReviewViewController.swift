@@ -12,6 +12,8 @@ class ReviewViewController: UIViewController {
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var containerView: UIView!
     @IBOutlet var restaurantImageView: UIImageView!
+    @IBOutlet var closeButton: UIButton!
+
     var restaurant: Restaurant!
     
     override func viewDidLoad() {
@@ -29,13 +31,20 @@ class ReviewViewController: UIViewController {
         let combineTransform = scaleTransform.concatenating(translateTransform)
         containerView.transform = combineTransform
         
+        // To animate close button
+        closeButton.transform = CGAffineTransform.init(translationX: 1000, y: 0)
+        
         restaurantImageView.image = UIImage(named: restaurant.image)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
             self.containerView.transform = CGAffineTransform.identity
-        }, completion: nil)
+        }, completion: {(_) -> Void in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.closeButton.transform = CGAffineTransform.identity
+            })
+        })
     }
     
     override func didReceiveMemoryWarning() {
