@@ -250,11 +250,20 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tt-gj-rUM">
+                                        <rect key="frame" x="257" y="-13" width="24" height="24"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <segue destination="kpG-PS-kOa" kind="unwind" unwindAction="closeWithSegue:" id="DYf-Gk-Yha"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9H6-5A-vXl" secondAttribute="trailing" constant="15" id="4c5-20-4hJ"/>
                                     <constraint firstAttribute="trailing" secondItem="4id-4Z-mpq" secondAttribute="trailing" id="EQ8-Rv-IfG"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Tt-gj-rUM" secondAttribute="trailing" constant="-12" id="HZy-dp-1l0"/>
                                     <constraint firstItem="4id-4Z-mpq" firstAttribute="top" secondItem="ma2-M5-9gb" secondAttribute="top" id="TpV-ij-8he"/>
                                     <constraint firstItem="9H6-5A-vXl" firstAttribute="leading" secondItem="ma2-M5-9gb" secondAttribute="leading" constant="15" id="Vek-ob-O8z"/>
                                     <constraint firstAttribute="trailing" secondItem="9Ny-Go-0bZ" secondAttribute="trailing" constant="8" id="XC1-Zd-d1Y"/>
@@ -263,6 +272,7 @@
                                     <constraint firstItem="9Ny-Go-0bZ" firstAttribute="leading" secondItem="ma2-M5-9gb" secondAttribute="leading" constant="8" id="ld8-jp-dsI"/>
                                     <constraint firstAttribute="bottom" secondItem="9Ny-Go-0bZ" secondAttribute="bottom" constant="10" id="rg5-RT-EIi"/>
                                     <constraint firstItem="9H6-5A-vXl" firstAttribute="top" secondItem="4id-4Z-mpq" secondAttribute="bottom" constant="8" id="uQ3-bq-lw4"/>
+                                    <constraint firstItem="3Tt-gj-rUM" firstAttribute="top" secondItem="ma2-M5-9gb" secondAttribute="top" constant="-13" id="uwt-M0-zIa"/>
                                     <constraint firstItem="4id-4Z-mpq" firstAttribute="leading" secondItem="ma2-M5-9gb" secondAttribute="leading" id="wv6-Df-IKM"/>
                                 </constraints>
                             </view>
@@ -280,6 +290,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvd-xI-tqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kpG-PS-kOa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3277.5999999999999" y="44.527736131934034"/>
         </scene>
@@ -306,5 +317,6 @@
         <image name="barrafina" width="480" height="480"/>
         <image name="cafeloisl" width="480" height="480"/>
         <image name="check" width="28" height="28"/>
+        <image name="cross" width="24" height="24"/>
     </resources>
 </document>
