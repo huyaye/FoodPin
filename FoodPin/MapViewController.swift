@@ -44,6 +44,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
         })
         
+        // Map Customization (since iOS9)
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.showsTraffic = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +71,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
+        annotationView?.pinTintColor = UIColor.orange
         
         return annotationView
     }
