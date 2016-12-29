@@ -162,12 +162,23 @@
                                     <outlet property="delegate" destination="Gl8-H9-RB5" id="v87-bj-CtS"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-sn-1Ar">
+                                <rect key="frame" x="339" y="72" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="jm4-9u-mt9"/>
+                                    <constraint firstAttribute="width" constant="28" id="n0v-sI-1Ws"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="check"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SFk-NT-uS0" secondAttribute="trailing" id="UUu-VQ-88y"/>
                             <constraint firstItem="SFk-NT-uS0" firstAttribute="top" secondItem="D33-Ye-Cuz" secondAttribute="top" id="ceT-6S-FhO"/>
+                            <constraint firstAttribute="trailing" secondItem="eYj-sn-1Ar" secondAttribute="trailing" constant="8" id="drP-dE-nak"/>
                             <constraint firstItem="Nff-A0-F1S" firstAttribute="top" secondItem="SFk-NT-uS0" secondAttribute="bottom" id="ijG-zm-q81"/>
+                            <constraint firstItem="eYj-sn-1Ar" firstAttribute="top" secondItem="fQd-ek-d7n" secondAttribute="bottom" constant="8" id="kDW-UE-zPG"/>
                             <constraint firstItem="SFk-NT-uS0" firstAttribute="leading" secondItem="D33-Ye-Cuz" secondAttribute="leading" id="miy-Na-Bgv"/>
                         </constraints>
                     </view>
@@ -199,4 +210,7 @@
             <point key="canvasLocation" x="544.79999999999995" y="48.125937031484263"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="check" width="28" height="28"/>
+    </resources>
 </document>
