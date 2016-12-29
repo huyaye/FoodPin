@@ -10,6 +10,7 @@ import UIKit
 
 class ReviewViewController: UIViewController {
     @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +20,17 @@ class ReviewViewController: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
+        
+        // To animate container view
+        containerView.transform = CGAffineTransform.init(scaleX: 0, y: 0)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.containerView.transform = CGAffineTransform.identity
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
