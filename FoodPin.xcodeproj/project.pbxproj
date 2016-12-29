@@ -79,17 +79,17 @@
 			isa = PBXGroup;
 			children = (
 				12DB632D1E120B6E006C001A /* AppDelegate.swift */,
-				12A98B9D1E14BCB400408434 /* ReviewViewController.swift */,
 				12DB63311E120B6E006C001A /* Main.storyboard */,
+				12DB63451E136E5F006C001A /* Restaurant.swift */,
+				12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */,
+				12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */,
+				12A98B9D1E14BCB400408434 /* ReviewViewController.swift */,
+				12A98BA21E14F44200408434 /* MapViewController.swift */,
 				12A98B9B1E13881300408434 /* RestaurantDetailTableViewCell.swift */,
+				12DB63411E122928006C001A /* RestaurantTableViewCell.swift */,
 				12DB63341E120B6E006C001A /* Assets.xcassets */,
 				12DB63361E120B6E006C001A /* LaunchScreen.storyboard */,
-				12A98BA21E14F44200408434 /* MapViewController.swift */,
 				12DB63391E120B6E006C001A /* Info.plist */,
-				12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */,
-				12DB63411E122928006C001A /* RestaurantTableViewCell.swift */,
-				12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */,
-				12DB63451E136E5F006C001A /* Restaurant.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
