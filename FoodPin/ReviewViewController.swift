@@ -22,7 +22,10 @@ class ReviewViewController: UIViewController {
         backgroundImageView.addSubview(blurEffectView)
         
         // To animate container view
-        containerView.transform = CGAffineTransform.init(scaleX: 0, y: 0)
+        let scaleTransform = CGAffineTransform.init(scaleX: 0, y: 0)
+        let translateTransform = CGAffineTransform.init(translationX: 0, y: -1000)
+        let combineTransform = scaleTransform.concatenating(translateTransform)
+        containerView.transform = combineTransform
     }
 
     override func viewDidAppear(_ animated: Bool) {
