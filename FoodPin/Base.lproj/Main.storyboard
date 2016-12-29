@@ -233,6 +233,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Absolutely love it!"/>
+                                                <connections>
+                                                    <segue destination="kpG-PS-kOa" kind="unwind" identifier="great" unwindAction="ratingButtonTappedWithSegue:" id="Iu8-co-gge"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-lB-8qJ">
                                                 <rect key="frame" x="0.0" y="42.5" width="253" height="37.5"/>
@@ -240,6 +243,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Good"/>
+                                                <connections>
+                                                    <segue destination="kpG-PS-kOa" kind="unwind" identifier="good" unwindAction="ratingButtonTappedWithSegue:" id="8le-1P-RIg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-mj-1kB">
                                                 <rect key="frame" x="0.0" y="85" width="253" height="37.5"/>
@@ -247,6 +253,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="I don't like it"/>
+                                                <connections>
+                                                    <segue destination="kpG-PS-kOa" kind="unwind" identifier="dislike" unwindAction="ratingButtonTappedWithSegue:" id="Pch-Q0-ftQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
