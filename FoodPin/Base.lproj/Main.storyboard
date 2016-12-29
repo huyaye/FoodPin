@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="2416.8000000000002" y="47.226386806596707"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="Yse-J8-arw">
             <objects>
-                <viewController id="myg-o6-lgy" sceneMemberID="viewController">
+                <viewController id="myg-o6-lgy" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OsV-36-GZB"/>
                         <viewControllerLayoutGuide type="bottom" id="kgo-Dn-EWW"/>
@@ -288,6 +288,9 @@
                             <constraint firstItem="ma2-M5-9gb" firstAttribute="leading" secondItem="PeT-A4-Kst" secondAttribute="leadingMargin" constant="37" id="t3y-WS-SEk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="ZCR-rM-u9n" id="iOh-lT-bSB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvd-xI-tqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kpG-PS-kOa" userLabel="Exit" sceneMemberID="exit"/>
