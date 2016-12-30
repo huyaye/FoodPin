@@ -10,6 +10,13 @@ import UIKit
 
 class AddRestaurantController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var photoImageView: UIImageView!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var typeTextField: UITextField!
+    @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var yesButton: UIButton!
+    @IBOutlet var noButton: UIButton!
+    
+    var isVisited = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +69,41 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
         
         dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func save() {
+        let name = nameTextField.text!
+        let type = typeTextField.text!
+        let location = locationTextField.text!
+        
+        if (name.isEmpty || type.isEmpty || location.isEmpty) {
+            let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the field is blank. Please note that all fields are required.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
+        print("Name: \(name)")
+        print("Type: \(type)")
+        print("Location: \(location)")
+        print("Have you been here: \(isVisited)")
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func toggleBeenHereButton(sender: UIButton) {
+        if sender == yesButton {
+            isVisited = true
+            // Change the backgroundColor property of yesButton to red
+            yesButton.backgroundColor = UIColor(red: 218.0/255.0, green: 100.0/255.0, blue: 70.0/255.0, alpha: 1.0)
+            // Change the backgroundColor property of noButton to gray
+            noButton.backgroundColor = UIColor(red: 218.0/255.0, green: 223.0/255.0, blue: 225.0/255.0, alpha: 1.0)
+        } else if sender == noButton {
+            isVisited = false
+            // Change the backgroundColor property of yesButton to gray
+            yesButton.backgroundColor = UIColor(red: 218.0/255.0, green: 223.0/255.0, blue: 225.0/255.0, alpha: 1.0)
+            // Change the backgroundColor property of noButton to red
+            noButton.backgroundColor = UIColor(red: 218.0/255.0, green: 100.0/255.0, blue: 70.0/255.0, alpha: 1.0)
+        }
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
