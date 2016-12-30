@@ -11,6 +11,7 @@
 		12A98B9E1E14BCB400408434 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98B9D1E14BCB400408434 /* ReviewViewController.swift */; };
 		12A98BA11E14DD4600408434 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A98BA01E14DD4600408434 /* MapKit.framework */; };
 		12A98BA31E14F44200408434 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BA21E14F44200408434 /* MapViewController.swift */; };
+		12A98BA51E162A9100408434 /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BA41E162A9100408434 /* AddRestaurantController.swift */; };
 		12DB632E1E120B6E006C001A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB632D1E120B6E006C001A /* AppDelegate.swift */; };
 		12DB63331E120B6E006C001A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63311E120B6E006C001A /* Main.storyboard */; };
 		12DB63351E120B6E006C001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63341E120B6E006C001A /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		12A98B9D1E14BCB400408434 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		12A98BA01E14DD4600408434 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12A98BA21E14F44200408434 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		12A98BA41E162A9100408434 /* AddRestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
 		12DB632A1E120B6E006C001A /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DB632D1E120B6E006C001A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12DB63321E120B6E006C001A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				12DB63311E120B6E006C001A /* Main.storyboard */,
 				12DB63451E136E5F006C001A /* Restaurant.swift */,
 				12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */,
+				12A98BA41E162A9100408434 /* AddRestaurantController.swift */,
 				12DB63431E13657E006C001A /* RestaurantDetailViewController.swift */,
 				12A98B9D1E14BCB400408434 /* ReviewViewController.swift */,
 				12A98BA21E14F44200408434 /* MapViewController.swift */,
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A98BA51E162A9100408434 /* AddRestaurantController.swift in Sources */,
 				12DB63461E136E5F006C001A /* Restaurant.swift in Sources */,
 				12DB63401E120EE5006C001A /* RestaurantTableViewController.swift in Sources */,
 				12A98B9E1E14BCB400408434 /* ReviewViewController.swift in Sources */,

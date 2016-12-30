@@ -104,7 +104,7 @@
         <!--New Restaurant-->
         <scene sceneID="cij-Zj-8eb">
             <objects>
-                <tableViewController id="vHK-Ps-O1z" sceneMemberID="viewController">
+                <tableViewController id="vHK-Ps-O1z" customClass="AddRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bEG-gu-8tp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
