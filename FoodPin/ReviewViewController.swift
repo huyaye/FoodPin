@@ -14,7 +14,7 @@ class ReviewViewController: UIViewController {
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var closeButton: UIButton!
 
-    var restaurant: Restaurant!
+    var restaurant: RestaurantMO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class ReviewViewController: UIViewController {
         // To animate close button
         closeButton.transform = CGAffineTransform.init(translationX: 1000, y: 0)
         
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image as! Data)
     }
 
     override func viewDidAppear(_ animated: Bool) {
