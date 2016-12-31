@@ -205,7 +205,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="693-Rq-e4O">
-                                                    <rect key="frame" x="18" y="35" width="133.5" height="34.5"/>
+                                                    <rect key="frame" x="18" y="35" width="134" height="35"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -227,46 +227,74 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE YOU BEEN HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eif-sR-Ixy">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eif-sR-Ixy">
+                                                    <rect key="frame" x="18" y="11" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-ul-jXs">
+                                                    <rect key="frame" x="18" y="44.5" width="119" height="17"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zVr-ul-jXs" secondAttribute="bottom" constant="2" id="2cJ-sL-jbI"/>
+                                                <constraint firstItem="eif-sR-Ixy" firstAttribute="leading" secondItem="zVr-ul-jXs" secondAttribute="leading" id="BGh-hY-jJe"/>
+                                                <constraint firstItem="eif-sR-Ixy" firstAttribute="top" secondItem="ZYq-v7-s88" secondAttribute="topMargin" constant="3" id="Vll-Xo-xnY"/>
+                                                <constraint firstItem="eif-sR-Ixy" firstAttribute="leading" secondItem="ZYq-v7-s88" secondAttribute="leadingMargin" constant="10" id="t5P-oF-vzD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="uRQ-n3-HNp">
+                                        <rect key="frame" x="0.0" y="538" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uRQ-n3-HNp" id="eb4-hB-qa5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE YOU BEEN HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-Nn-enk">
                                                     <rect key="frame" x="18" y="11" width="181" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyV-Ya-M3g">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rj-Vb-LqT">
                                                     <rect key="frame" x="18" y="34" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.85490196078431369" green="0.39215686274509803" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.85490196080000003" green="0.3921568627" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="4rC-JF-Ael"/>
+                                                        <constraint firstAttribute="width" constant="46" id="RRX-NZ-vju"/>
                                                     </constraints>
                                                     <state key="normal" title="YES">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="toggleBeenHereButtonWithSender:" destination="vHK-Ps-O1z" eventType="touchUpInside" id="gJP-6L-KMC"/>
+                                                        <action selector="toggleBeenHereButtonWithSender:" destination="vHK-Ps-O1z" eventType="touchUpInside" id="7lU-mU-HPL"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT3-6N-lWK">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fu-49-jJ1">
                                                     <rect key="frame" x="70" y="34" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.85490196078431369" green="0.87450980392156863" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.85490196080000003" green="0.87450980389999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="5aq-ot-eBt"/>
+                                                        <constraint firstAttribute="width" constant="46" id="8Pn-SY-NA6"/>
                                                     </constraints>
                                                     <state key="normal" title="NO">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="toggleBeenHereButtonWithSender:" destination="vHK-Ps-O1z" eventType="touchUpInside" id="JyJ-ke-XpL"/>
+                                                        <action selector="toggleBeenHereButtonWithSender:" destination="vHK-Ps-O1z" eventType="touchUpInside" id="SZX-uf-CF6"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jyV-Ya-M3g" firstAttribute="top" secondItem="eif-sR-Ixy" secondAttribute="bottom" constant="2" id="0Bk-uh-3Ya"/>
-                                                <constraint firstItem="jyV-Ya-M3g" firstAttribute="baseline" secondItem="RT3-6N-lWK" secondAttribute="baseline" id="9CF-80-E6X"/>
-                                                <constraint firstItem="RT3-6N-lWK" firstAttribute="leading" secondItem="jyV-Ya-M3g" secondAttribute="trailing" constant="6" id="9Pi-v1-hyA"/>
-                                                <constraint firstItem="eif-sR-Ixy" firstAttribute="top" secondItem="ZYq-v7-s88" secondAttribute="topMargin" constant="3" id="Vll-Xo-xnY"/>
-                                                <constraint firstItem="jyV-Ya-M3g" firstAttribute="leading" secondItem="eif-sR-Ixy" secondAttribute="leading" id="iln-ez-jEf"/>
-                                                <constraint firstItem="eif-sR-Ixy" firstAttribute="leading" secondItem="ZYq-v7-s88" secondAttribute="leadingMargin" constant="10" id="t5P-oF-vzD"/>
+                                                <constraint firstItem="1Rj-Vb-LqT" firstAttribute="top" secondItem="nr7-Nn-enk" secondAttribute="bottom" constant="2" id="5Zq-zs-uT1"/>
+                                                <constraint firstItem="1Rj-Vb-LqT" firstAttribute="baseline" secondItem="7Fu-49-jJ1" secondAttribute="baseline" id="72O-zI-450"/>
+                                                <constraint firstItem="nr7-Nn-enk" firstAttribute="top" secondItem="eb4-hB-qa5" secondAttribute="topMargin" constant="3" id="YL0-MS-Fo1"/>
+                                                <constraint firstItem="nr7-Nn-enk" firstAttribute="leading" secondItem="eb4-hB-qa5" secondAttribute="leadingMargin" constant="10" id="bii-me-K0X"/>
+                                                <constraint firstItem="1Rj-Vb-LqT" firstAttribute="leading" secondItem="nr7-Nn-enk" secondAttribute="leading" id="o2c-yL-jpV"/>
+                                                <constraint firstItem="7Fu-49-jJ1" firstAttribute="leading" secondItem="1Rj-Vb-LqT" secondAttribute="trailing" constant="6" id="wvm-EJ-iBJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -295,10 +323,11 @@
                     <connections>
                         <outlet property="locationTextField" destination="693-Rq-e4O" id="meQ-Xb-Mcg"/>
                         <outlet property="nameTextField" destination="Iad-Fq-dzw" id="z80-A8-m1z"/>
-                        <outlet property="noButton" destination="RT3-6N-lWK" id="3SN-AC-kdp"/>
+                        <outlet property="noButton" destination="7Fu-49-jJ1" id="Lks-Tk-3z2"/>
+                        <outlet property="phoneTextField" destination="zVr-ul-jXs" id="yRw-f1-nEy"/>
                         <outlet property="photoImageView" destination="8H7-6p-XPz" id="o74-3U-fU8"/>
                         <outlet property="typeTextField" destination="K4K-30-WTM" id="32Y-Ht-z3D"/>
-                        <outlet property="yesButton" destination="jyV-Ya-M3g" id="qwj-bb-wR3"/>
+                        <outlet property="yesButton" destination="1Rj-Vb-LqT" id="uHe-fA-hzD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="241-ja-pGu" userLabel="First Responder" sceneMemberID="firstResponder"/>

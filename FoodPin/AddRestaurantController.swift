@@ -14,6 +14,7 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var typeTextField: UITextField!
     @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
     
@@ -76,15 +77,18 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
         let name = nameTextField.text!
         let type = typeTextField.text!
         let location = locationTextField.text!
+        let phone = phoneTextField.text!
         
-        if (name.isEmpty || type.isEmpty || location.isEmpty) {
+        if (name.isEmpty || type.isEmpty || location.isEmpty || phone.isEmpty) {
             let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the field is blank. Please note that all fields are required.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             present(alertController, animated: true, completion: nil)
+            return
         }
         print("Name: \(name)")
         print("Type: \(type)")
         print("Location: \(location)")
+        print("Phone: \(phone)")
         print("Have you been here: \(isVisited)")
         
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
@@ -92,6 +96,7 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
             restaurant.name = name
             restaurant.type = type
             restaurant.location = location
+            restaurant.phone = phone
             restaurant.isVisited = isVisited
             
             if let restaurantImage = photoImageView.image {
