@@ -80,6 +80,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        
+        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor(red: 218.0/255.0, green: 100.0/255.0, blue: 70.0/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -242,6 +246,12 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         searchResults = restaurants.filter({ (restaurant) -> Bool in
             if let name = restaurant.name {
                 let isMatch = name.localizedCaseInsensitiveContains(searchText)
+                if isMatch == true {
+                    return true
+                }
+            }
+            if let location = restaurant.location {
+                let isMatch = location.localizedCaseInsensitiveContains(searchText)
                 return isMatch
             }
             return false
