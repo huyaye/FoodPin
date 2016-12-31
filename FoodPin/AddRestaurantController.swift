@@ -99,9 +99,11 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
                     restaurant.image = NSData(data: imageData)
                 }
             }
+            
+            print("Saving data to context ...")
+            appDelegate.saveContext()
         }
         
-        print("Saving data to context ...")
         dismiss(animated: true, completion: nil)
     }
     
