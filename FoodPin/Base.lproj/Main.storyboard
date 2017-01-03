@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -120,7 +121,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-6p-XPz">
-                                                    <rect key="frame" x="155" y="92" width="64" height="64"/>
+                                                    <rect key="frame" x="155.5" y="92" width="64" height="64"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -589,6 +590,75 @@
                 <exit id="kpG-PS-kOa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3972" y="-183"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="z21-x4-9YQ">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WBv-an-LN1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iao-pV-FT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2519" y="-416"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="ILz-IL-Qrx">
+            <objects>
+                <viewController id="0vs-fc-1DE" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wAO-l6-rlh"/>
+                        <viewControllerLayoutGuide type="bottom" id="cF8-Pc-gwm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BbQ-1h-e7U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICN-Wf-xmc">
+                                <rect key="frame" x="106.5" y="28" width="162" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-Ug-fZs">
+                                <rect key="frame" x="37.5" y="82" width="300" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232" id="4J5-jZ-Oig"/>
+                                    <constraint firstAttribute="width" constant="300" id="WxA-fi-QGZ"/>
+                                    <constraint firstAttribute="width" secondItem="CBG-Ug-fZs" secondAttribute="height" multiplier="75:58" id="i1a-Bm-BDp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-wm-Umy">
+                                <rect key="frame" x="46.5" y="324" width="282" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="FsU-Db-CbS">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="32"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="282" id="gCt-B7-pgw">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="500"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75294117650000003" green="0.22352941179999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TWf-wm-Umy" firstAttribute="centerX" secondItem="BbQ-1h-e7U" secondAttribute="centerX" id="27O-2P-UzI"/>
+                            <constraint firstItem="ICN-Wf-xmc" firstAttribute="centerX" secondItem="BbQ-1h-e7U" secondAttribute="centerX" id="BlZ-dE-afb"/>
+                            <constraint firstItem="CBG-Ug-fZs" firstAttribute="centerX" secondItem="BbQ-1h-e7U" secondAttribute="centerX" id="Rpp-6M-tdp"/>
+                            <constraint firstItem="CBG-Ug-fZs" firstAttribute="top" secondItem="ICN-Wf-xmc" secondAttribute="bottom" constant="15" id="WMV-tT-Vsh"/>
+                            <constraint firstItem="ICN-Wf-xmc" firstAttribute="top" secondItem="wAO-l6-rlh" secondAttribute="bottom" constant="8" id="kiz-Ea-86V"/>
+                            <constraint firstItem="TWf-wm-Umy" firstAttribute="top" secondItem="CBG-Ug-fZs" secondAttribute="bottom" constant="10" id="yVH-oa-UZG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="CBG-Ug-fZs" id="8E3-jI-eBb"/>
+                        <outlet property="contentLabel" destination="TWf-wm-Umy" id="f21-Ng-aRA"/>
+                        <outlet property="headingLabel" destination="ICN-Wf-xmc" id="926-to-gIS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aT-Uu-eoz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1719.2" y="-416.0419790104948"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Z2-RX-ZKK">
