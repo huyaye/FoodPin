@@ -96,6 +96,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         navigationController?.hidesBarsOnSwipe = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? WalkthroughPageViewController {
+            present(pageViewController, animated: true, completion: nil)
+        }
+    }
     
     // MARK: - Table view data source
 
