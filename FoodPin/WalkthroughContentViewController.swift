@@ -12,6 +12,7 @@ class WalkthroughContentViewController: UIViewController {
     @IBOutlet var headingLabel: UILabel!
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var contentImageView: UIImageView!
+    @IBOutlet var pageControl: UIPageControl!
     
     var index = 0   // store the current page index
     var heading = ""
@@ -24,6 +25,8 @@ class WalkthroughContentViewController: UIViewController {
         headingLabel.text = heading
         contentLabel.text = content
         contentImageView.image = UIImage(named: imageFile)
+        
+        pageControl.currentPage = index
     }
 
     override func didReceiveMemoryWarning() {

@@ -58,6 +58,10 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         }
         return nil
     }
+    
+//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//        return pageHeadings.count
+//    }
 
     /*
     // MARK: - Navigation
