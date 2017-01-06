@@ -13,6 +13,7 @@ class WalkthroughContentViewController: UIViewController {
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var contentImageView: UIImageView!
     @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var forwardButton: UIButton!
     
     var index = 0   // store the current page index
     var heading = ""
@@ -27,6 +28,12 @@ class WalkthroughContentViewController: UIViewController {
         contentImageView.image = UIImage(named: imageFile)
         
         pageControl.currentPage = index
+        
+        switch index {
+        case 0...1: forwardButton.setTitle("NEXT", for: .normal)
+        case 2: forwardButton.setTitle("DONE", for: .normal)
+        default: break
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +41,17 @@ class WalkthroughContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func nextButtonTapped(sender: UIButton) {
+        switch index {
+        case 0...1:
+            let pageViewController = parent as! WalkthroughPageViewController
+            pageViewController.forward(index: index)
+        case 2:
+            dismiss(animated: true, completion: nil)
+        default: break
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

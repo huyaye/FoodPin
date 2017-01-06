@@ -612,13 +612,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICN-Wf-xmc">
-                                <rect key="frame" x="107" y="28" width="162" height="39"/>
+                                <rect key="frame" x="106.5" y="28" width="162" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-Ug-fZs">
-                                <rect key="frame" x="38" y="82" width="300" height="232"/>
+                                <rect key="frame" x="37.5" y="82" width="300" height="232"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="232" id="4J5-jZ-Oig"/>
                                     <constraint firstAttribute="width" constant="300" id="WxA-fi-QGZ"/>
@@ -626,7 +626,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-wm-Umy">
-                                <rect key="frame" x="47" y="324" width="282" height="64"/>
+                                <rect key="frame" x="46.5" y="324" width="282" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="FsU-Db-CbS">
                                         <variation key="heightClass=compact-widthClass=compact" constant="32"/>
@@ -642,6 +642,15 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Q6-BG-NYG">
                                 <rect key="frame" x="168" y="625" width="39" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-Ha-Zx2">
+                                <rect key="frame" x="324" y="628" width="39" height="30"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTappedWithSender:" destination="0vs-fc-1DE" eventType="touchUpInside" id="bOG-cz-irY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73725490196078436" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -652,12 +661,15 @@
                             <constraint firstItem="CBG-Ug-fZs" firstAttribute="top" secondItem="ICN-Wf-xmc" secondAttribute="bottom" constant="15" id="WMV-tT-Vsh"/>
                             <constraint firstItem="3Q6-BG-NYG" firstAttribute="centerX" secondItem="BbQ-1h-e7U" secondAttribute="centerX" id="d5C-Bz-ns8"/>
                             <constraint firstItem="ICN-Wf-xmc" firstAttribute="top" secondItem="wAO-l6-rlh" secondAttribute="bottom" constant="8" id="kiz-Ea-86V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RRf-Ha-Zx2" secondAttribute="trailing" constant="-4" id="on3-xs-XdU"/>
+                            <constraint firstItem="cF8-Pc-gwm" firstAttribute="top" secondItem="RRf-Ha-Zx2" secondAttribute="bottom" constant="9" id="pCa-Vh-3OT"/>
                             <constraint firstItem="TWf-wm-Umy" firstAttribute="top" secondItem="CBG-Ug-fZs" secondAttribute="bottom" constant="10" id="yVH-oa-UZG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentImageView" destination="CBG-Ug-fZs" id="8E3-jI-eBb"/>
                         <outlet property="contentLabel" destination="TWf-wm-Umy" id="f21-Ng-aRA"/>
+                        <outlet property="forwardButton" destination="RRf-Ha-Zx2" id="6mI-Qr-Yfk"/>
                         <outlet property="headingLabel" destination="ICN-Wf-xmc" id="926-to-gIS"/>
                         <outlet property="pageControl" destination="3Q6-BG-NYG" id="ktY-br-tkq"/>
                     </connections>
