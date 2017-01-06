@@ -97,6 +97,13 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Once user tap the DONE button, the app will no longer display the walkthrough screens.
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        
         if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? WalkthroughPageViewController {
             present(pageViewController, animated: true, completion: nil)
         }
