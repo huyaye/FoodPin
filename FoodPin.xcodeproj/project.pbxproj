@@ -18,6 +18,7 @@
 		12A98BE81E20B41700408434 /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A98BE71E20B41700408434 /* discover.storyboard */; };
 		12A98BEA1E20B45F00408434 /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A98BE91E20B45F00408434 /* about.storyboard */; };
 		12A98BEC1E20C7EE00408434 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BEB1E20C7EE00408434 /* AboutTableViewController.swift */; };
+		12A98BEE1E20D57000408434 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BED1E20D57000408434 /* WebViewController.swift */; };
 		12DB632E1E120B6E006C001A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB632D1E120B6E006C001A /* AppDelegate.swift */; };
 		12DB63331E120B6E006C001A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63311E120B6E006C001A /* Main.storyboard */; };
 		12DB63351E120B6E006C001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63341E120B6E006C001A /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		12A98BE71E20B41700408434 /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
 		12A98BE91E20B45F00408434 /* about.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = about.storyboard; sourceTree = "<group>"; };
 		12A98BEB1E20C7EE00408434 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		12A98BED1E20D57000408434 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		12DB632A1E120B6E006C001A /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DB632D1E120B6E006C001A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12DB63321E120B6E006C001A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				12DB632D1E120B6E006C001A /* AppDelegate.swift */,
 				12DB63311E120B6E006C001A /* Main.storyboard */,
+				12A98BED1E20D57000408434 /* WebViewController.swift */,
 				12A98BE91E20B45F00408434 /* about.storyboard */,
 				12A98BEB1E20C7EE00408434 /* AboutTableViewController.swift */,
 				12A98BE71E20B41700408434 /* discover.storyboard */,
@@ -206,6 +209,7 @@
 				12A98BD21E165C8800408434 /* FoodPin.xcdatamodeld in Sources */,
 				12A98B9C1E13881300408434 /* RestaurantDetailTableViewCell.swift in Sources */,
 				12DB63441E13657E006C001A /* RestaurantDetailViewController.swift in Sources */,
+				12A98BEE1E20D57000408434 /* WebViewController.swift in Sources */,
 				12DB632E1E120B6E006C001A /* AppDelegate.swift in Sources */,
 				12A98BA31E14F44200408434 /* MapViewController.swift in Sources */,
 			);

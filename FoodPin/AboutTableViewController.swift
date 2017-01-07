@@ -61,6 +61,8 @@ class AboutTableViewController: UITableViewController {
                 if let url = URL(string: "http://www.apple.com/itunes/charts/paid-apps/") {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
+            } else if indexPath.row == 1 {
+                performSegue(withIdentifier: "showWebView", sender: self)
             }
         default:
             break
