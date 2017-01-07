@@ -15,6 +15,8 @@
 		12A98BD21E165C8800408434 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BD01E165C8800408434 /* FoodPin.xcdatamodeld */; };
 		12A98BD41E1BE51800408434 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BD31E1BE51800408434 /* WalkthroughContentViewController.swift */; };
 		12A98BD61E1E806100408434 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A98BD51E1E806100408434 /* WalkthroughPageViewController.swift */; };
+		12A98BE81E20B41700408434 /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A98BE71E20B41700408434 /* discover.storyboard */; };
+		12A98BEA1E20B45F00408434 /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A98BE91E20B45F00408434 /* about.storyboard */; };
 		12DB632E1E120B6E006C001A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB632D1E120B6E006C001A /* AppDelegate.swift */; };
 		12DB63331E120B6E006C001A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63311E120B6E006C001A /* Main.storyboard */; };
 		12DB63351E120B6E006C001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12DB63341E120B6E006C001A /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		12A98BD11E165C8800408434 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		12A98BD31E1BE51800408434 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		12A98BD51E1E806100408434 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		12A98BE71E20B41700408434 /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
+		12A98BE91E20B45F00408434 /* about.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = about.storyboard; sourceTree = "<group>"; };
 		12DB632A1E120B6E006C001A /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12DB632D1E120B6E006C001A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12DB63321E120B6E006C001A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			children = (
 				12DB632D1E120B6E006C001A /* AppDelegate.swift */,
 				12DB63311E120B6E006C001A /* Main.storyboard */,
+				12A98BE91E20B45F00408434 /* about.storyboard */,
+				12A98BE71E20B41700408434 /* discover.storyboard */,
 				12DB63451E136E5F006C001A /* Restaurant.swift */,
 				12A98BD01E165C8800408434 /* FoodPin.xcdatamodeld */,
 				12DB633F1E120EE5006C001A /* RestaurantTableViewController.swift */,
@@ -172,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				12DB63381E120B6E006C001A /* LaunchScreen.storyboard in Resources */,
+				12A98BEA1E20B45F00408434 /* about.storyboard in Resources */,
+				12A98BE81E20B41700408434 /* discover.storyboard in Resources */,
 				12DB63351E120B6E006C001A /* Assets.xcassets in Resources */,
 				12DB63331E120B6E006C001A /* Main.storyboard in Resources */,
 			);
