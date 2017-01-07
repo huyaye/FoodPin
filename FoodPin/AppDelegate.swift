@@ -23,8 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let barFont = UIFont(name: "AvenirNext-DemiBold", size: 24.0) {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:barFont]
         }
+        
         // Customize Status bar
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        // Customize Tab bar
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor(red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
+        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "tabitem-selected")
+        
         return true
     }
 
