@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     var restaurants: [RestaurantMO] = []
@@ -84,6 +85,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         searchController.searchBar.placeholder = "Search restaurants..."
         searchController.searchBar.tintColor = UIColor.white
         searchController.searchBar.barTintColor = UIColor(red: 218.0/255.0, green: 100.0/255.0, blue: 70.0/255.0, alpha: 1.0)
+        
+        // Add notification
+        prepareNotification()
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,6 +111,30 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? WalkthroughPageViewController {
             present(pageViewController, animated: true, completion: nil)
         }
+    }
+    
+    func prepareNotification() {
+        // Make sure the restaurant array is not empty
+        if restaurants.count <= 0 {
+            return
+        }
+        
+        // Pick a restaurant randomly
+        let randomNum = Int(arc4random_uniform(UInt32(restaurants.count)))
+        let suggestedRestaurant = restaurants[randomNum]
+        
+        // Create the user notification
+        let content = UNMutableNotificationContent()
+        content.title = "Restaurant Recommendation"
+        content.subtitle = "Try new food today"
+        content.body = "I recommend you to check out \(suggestedRestaurant.name!). The restaurant is one of your favorites. It is located at \(suggestedRestaurant.location!). Would you like to give it a try?"
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: "foodpin.restaurantSuggestion", content: content, trigger: trigger)
+        
+        // Schedule the notification
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     // MARK: - Table view data source
