@@ -129,7 +129,16 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         content.subtitle = "Try new food today"
         content.body = "I recommend you to check out \(suggestedRestaurant.name!). The restaurant is one of your favorites. It is located at \(suggestedRestaurant.location!). Would you like to give it a try?"
         content.sound = UNNotificationSound.default()
-        
+        // Add image attachments
+        let tempDirURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+        let tempFileURL = tempDirURL.appendingPathComponent("suggested-restaurant.jpg")
+        if let image = UIImage(data: suggestedRestaurant.image! as Data) {
+            try? UIImageJPEGRepresentation(image, 1.0)?.write(to: tempFileURL)
+            if let restaurantImage = try? UNNotificationAttachment(identifier: "restaurantImage", url: tempFileURL, options: nil) {
+                content.attachments = [restaurantImage]
+            }
+        }
+
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         let request = UNNotificationRequest(identifier: "foodpin.restaurantSuggestion", content: content, trigger: trigger)
         
